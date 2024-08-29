@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
-import './App.css'; 
-//import image1 from '../image/img1.jpg'
-import { IoMdContact } from "react-icons/io";
+import './main.css'; 
+import image1 from '../image/img1.jpg'
+
 import { PiStudentBold } from "react-icons/pi";
-import { IoMdHelpCircleOutline } from "react-icons/io";
-import { FaBookOpen } from "react-icons/fa";import { CiSettings } from "react-icons/ci";
-import { MdEmail } from "react-icons/md";
-import { IoDocument } from "react-icons/io5";
-import { IoManSharp } from "react-icons/io5";
+import { FaMoneyBillTransfer } from "react-icons/fa6";
 
 
-const App = () => {
+
+const Main = () => {
 
   const [regularStudents, setRegularStudents] = useState(8);
   const [remedialStudents, setRemedialStudents] = useState(13);
@@ -29,14 +26,14 @@ const App = () => {
         <div className="sidebar-item"><PiStudentBold  className='icon' /> <br/>Report Delivery</div>
         <div className="sidebar-item"><PiStudentBold  className='icon' /> <br/>Attendance</div>
         <div className="sidebar-footer">
-          <div className="sidebar-item"><CiSettings  className='icon'/></div>
-          <div className="sidebar-item"><IoMdHelpCircleOutline className='icon' /></div>
+          <div className="sidebar-item">Settings</div>
+          <div className="sidebar-item">Help</div>
         </div>
       </div>
 
  
       <div className="main-content">
-        <h1 className='header'>Student Management</h1>
+        <h2>Student Management</h2>
 
        
         <div className="student-cards">
@@ -45,11 +42,8 @@ const App = () => {
               <i className="fas fa-user"></i>
             </div>
             <div className="card-details">
-            <div className='icon2'>
-              <span><IoMdContact /></span>
-              </div>
-              <p>Regular Students</p>
               <span>{regularStudents}</span>
+              <p>Regular Students</p>
             </div>
           </div>
           <div className="card purple">
@@ -57,11 +51,8 @@ const App = () => {
               <i className="fas fa-user-graduate"></i>
             </div>
             <div className="card-details">
-            <div className='icon2'>
-              <span><IoMdContact /></span>
-              </div>
-              <p>Remedial Students</p>
               <span>{remedialStudents}</span>
+              <p>Remedial Students</p>
             </div>
           </div>
           <div className="card green">
@@ -69,12 +60,8 @@ const App = () => {
               <i className="fas fa-users"></i>
             </div>
             <div className="card-details">
-              <div className='icon2'>
-              <span><IoMdContact /></span>
-              </div>
-              <p>In Paid Clubs</p>
               <span>{inPaidClubs}</span>
-
+              <p>In Paid Clubs</p>
             </div>
           </div>
         </div>
@@ -82,31 +69,31 @@ const App = () => {
         
         <div className="menu">
           <div className="menu-item">
-            <i className="fas fa-user-plus"><FaBookOpen /></i>
+            <i className="fas fa-user-plus"></i>
             <p>Regular Enrollment</p>
           </div>
           <div className="menu-item">
-            <i className="fas fa-book"><FaBookOpen /></i>
+            <i className="fas fa-book"></i>
             <p>Remedial Enrollment</p>
           </div>
           <div className="menu-item">
-            <i className="fas fa-club"><IoManSharp /></i>
+            <i className="fas fa-club"></i>
             <p>Club Management</p>
           </div>
           <div className="menu-item">
-            <i className="fas fa-chalkboard-teacher"><FaBookOpen /></i>
+            <i className="fas fa-chalkboard-teacher"></i>
             <p>Classroom Management</p>
           </div>
           <div className="menu-item">
-            <i className="fas fa-envelope"><MdEmail/></i>
+            <i className="fas fa-envelope"></i>
             <p>SMS / EMAIL</p>
           </div>
           <div className="menu-item">
-            <i className="fas fa-chart-bar"><IoDocument /></i>
+            <i className="fas fa-chart-bar"></i>
             <p>Attendance</p>
           </div>
           <div className="menu-item">
-            <i className="fas fa-clinic-medical"><IoManSharp /></i>
+            <i className="fas fa-clinic-medical"></i>
             <p>Clinic</p>
           </div>
         </div>
@@ -115,4 +102,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Main;
